@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\post;
 use Illuminate\Http\Request;
 
@@ -37,7 +35,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {   
-        
+        request()->validate([
+            "title"=>"required",
+            "description"=>"required",
+        ]);
         $data= new post;
         $data->title=request('title');
         $data->description=request('description');
@@ -76,7 +77,11 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update($id)
-    {
+ {
+    request()->validate([
+        "title"=>"required",
+        "description"=>"required",
+    ]);
         $data=post::find($id);
         $data->title=request('title');
         $data->description=request('description');

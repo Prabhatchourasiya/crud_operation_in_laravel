@@ -14,6 +14,7 @@
 <div>
     {{--section--}}
     @yield('container');
+  
 </div>
 </body>
 </html>
