@@ -1,5 +1,8 @@
 @extends("layouts.frontend")
 @section('container')
+@section('title')
+crud-create
+@endsection
       
       <center><h1>Create Form</h1></center>
       <form class="container" action="/post" method="post">

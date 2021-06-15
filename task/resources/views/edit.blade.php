@@ -1,5 +1,8 @@
 @extends("layouts.frontend")
 @section('container')
+@section('title')
+crud-edit
+@endsection
     <center><h1>Update Form</h1></center> 
     <form method="post" action="/post/{{$data->id}}" class="container" >
       @csrf

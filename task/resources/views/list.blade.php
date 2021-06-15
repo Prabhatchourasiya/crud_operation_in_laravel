@@ -1,5 +1,8 @@
 @extends("layouts.frontend")
 @section('container')
+@section('title')
+crud-list
+@endsection
   {{session('msg')}}
 <table class="table" border="1px" ><center><h1>List of data submitted:-</h1></center>
     <thead>
